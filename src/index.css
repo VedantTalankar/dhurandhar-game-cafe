@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0e1710] text-[#ded9cb] font-sans min-h-screen overflow-x-hidden;
+    background-image: 
+      radial-gradient(ellipse at 50% 0%, rgba(139, 172, 15, 0.06) 0%, transparent 60%),
+      linear-gradient(to right, rgba(139, 172, 15, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 172, 15, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+  }
+}
+
+/* Custom Game Boy / Stone Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c160e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d4233;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8bac0f;
+}
+
+/* Subtle CSS Pixel Mist Clusters */
+.pixel-mist-bar {
+  background-image: radial-gradient(circle, rgba(219, 228, 222, 0.25) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+/* Pixel Stepped Border (Game Boy Cartridge / Bezel Style) */
+.gb-box {
+  border: 2px solid #2d4233;
+  box-shadow: 2px 2px 0px #0c160e;
+}
+
+.gb-screen-box {
+  background-color: #1a2711;
+  border: 2px solid #3e4a30;
+  box-shadow: inset 0 0 10px rgba(12, 22, 14, 0.8);
+}
